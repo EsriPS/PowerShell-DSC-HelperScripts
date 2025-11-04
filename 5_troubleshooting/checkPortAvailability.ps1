@@ -1,4 +1,14 @@
-﻿#Adrien Hafner
+﻿#Copyright 2025 Esri
+
+#Licensed under the Apache License Version 2.0 (the "License"); you may not use this file except in compliance with the License.
+#You may obtain a copy of the License at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+#Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+
+#Adrien Hafner
 #This script was built for testing port connectivity and availability during the preliminary stages of a deployment when you may not have yet installed the Esri applications that would be listening on their specific ports, but you still need to determine if the ports are open or if they're being blocked by a firewall.
 #The script first translates an fqdn to its IP address so it can be used by nmap, and also as a test of resolvability
 #The script then checks to see if nmap is installed, and if not, downloads and installs it.
@@ -96,11 +106,3 @@ Remove-Item -Path $nmapOutputFile -Force
 
 
 
-#Copyright 2025 Esri
-
-#Licensed under the Apache License Version 2.0 (the "License"); you may not use this file except in compliance with the License.
-#You may obtain a copy of the License at
-#
-#    http://www.apache.org/licenses/LICENSE-2.0
-#
-#Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.

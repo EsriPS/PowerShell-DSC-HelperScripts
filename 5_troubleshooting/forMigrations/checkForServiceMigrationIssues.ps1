@@ -1,4 +1,14 @@
-﻿##Adrien Hafner
+﻿#Copyright 2025 Esri
+
+#Licensed under the Apache License Version 2.0 (the "License"); you may not use this file except in compliance with the License.
+#You may obtain a copy of the License at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+#Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+
+##Adrien Hafner
 ##This script is intended to be used for migrations that make use of PowerShell DSC.  
 ##After content is migrated between a source and a target system, you can run this script targeting the ArcGIS Server logs to search for the string of text "Failed to create the service" to see if any services failed to migrate over.
 ##If entries are found in the logs with a time stamp coincident with that of the migration attempt, you should investigate the /arcgisserver/config-store/services folder to see if the service is present, and if not, manually copy it from the source.
@@ -38,11 +48,4 @@ Invoke-Command -ComputerName $remoteServer -ScriptBlock {
 
 
 
-#Copyright 2025 Esri
 
-#Licensed under the Apache License Version 2.0 (the "License"); you may not use this file except in compliance with the License.
-#You may obtain a copy of the License at
-#
-#    http://www.apache.org/licenses/LICENSE-2.0
-#
-#Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.

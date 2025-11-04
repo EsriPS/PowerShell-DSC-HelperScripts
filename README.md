@@ -1,7 +1,14 @@
 
 # ArcGIS PowerShell DSC Helper Scripts
 
-A series of helper scripts have been developed to assist with both setting up and configuring the PowerShell DSC environment, as well as making the ArcGIS deployment more standardized and seamless. Below is a brief description of some of them:
+This repository provides a series of helper scripts which have been developed to assist with both setting up and configuring the PowerShell DSC environment, as well as making the ArcGIS deployment more standardized and seamless.  These scripts are intended to be used alongside the PowerShell scripts provided as part of the [ArcGIS Module for PowerShell DSC](https://github.com/Esri/arcgis-powershell-dsc), which provides scripted configuration-as-code support for deploying and managing ArcGIS software on Windows OS servers.
+
+
+
+## **Instructions: How To Run These Scripts**
+These scripts can be run by opening a Windows PowerShell ISE session as an Administrator, and then choosing the "Open Script" button (second from the left) from the toolbar.  The "Run" button runs the script and is located towards the middle of the same toolbar.  As a general note, you must "Save" a script before running it after making any changes, and you will be prompted to save if you do not do so before clicking "Run".
+
+## **Features: Each script with a description of its usage scenario is described below**
 
 ## [1_settingUpPowerShellDsc folder](./1_settingUpPowerShellDsc/)
 <mark>You should run both of these scripts for each deployment.</mark>
@@ -126,6 +133,9 @@ The scripts in this folder are designed to be run on the internal orchestration/
 - [**transferInstallers.ps1**](./3_settingUpServerEnvironment/forDisconnectedEnvironments/transferInstallers.ps1)
     - this script will transfer the contents of an ‘installers’ folder (as well as any sub-directories) from a local location to a list of machines specified for each ArcGIS component. Make sure not to include the orchestrating machine in the list of $arcgisservers.
 
+- [**transferPatches.ps1**](./3_settingUpServerEnvironment/forDisconnectedEnvironments/transferPatches.ps1)
+    - This script transfers pre-downloaded Esri patches from the orchestration server to each respective server in the deployment.
+
 - [**transferPreRequisites.ps1**](./3_settingUpServerEnvironment/forDisconnectedEnvironments/transferPreRequisites.ps1)
     - This script transfers the Web Adaptor prerequisites from a local machine to the web server that will be used for hosting the Web Adaptors.
 
@@ -175,15 +185,12 @@ The scripts in this folder are designed to be run on the internal orchestration/
     - This script is intended to be used for migrations that make use of PowerShell DSC.  After content is migrated between a source and target system, you can run this script targeting the ArcGIS Server logs to search for the string of text "Failed to create the service" to see if any services failed to migrate over.  If entries are found in the logs with a time stamp that is coincident with that of the migration attempt, you should investigate the /arcgisserver/config-store/services folder to see if the service is present.  If not, manually copy it from the source environment to the target environment.
 
 
-## **How To Run These Scripts**
-These scripts can be run by opening a Windows PowerShell ISE session as an Administrator, and then choosing the "Open Script" button (second from the left) from the toolbar.  The "Run" button runs the script and is located towards the middle of the same toolbar.  As a general note, you must "Save" a script before running it after making any changes, and you will be prompted to save if you do not do so before clicking "Run".
-
 ## Resources
 [ArcGIS PowerShell DSC GitHub Repository](https://github.com/Esri/arcgis-powershell-dsc)
 
 ## Issues
 
-Find a bug or want to request a new feature?  Please let us know by submitting an issue.
+Find a bug or want to request a new feature?  Please let us know by submitting an [issue](https://github.com/EsriPS/PowerShell-DSC-HelperScripts/issues).
 
 
 ## Contributing
