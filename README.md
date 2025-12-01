@@ -166,6 +166,9 @@ The scripts in this folder are designed to be run on the internal orchestration/
 - [**checkPortAvailablity.ps1**](./5_troubleshooting/checkPortAvailability.ps1)
     - This script does a few key things to assess network readiness for an ArcGIS Enterprise deployment.  First, it resolves a fully-qualified domain name into an IP address, which tests for DNS resolvability.  Then, it checks to see if the nmap tool is installed, and if not, the script will download and install it.  Finally, the script performs a port scan of the port you specify against the IP address which was resolved from the fully-qualified domain name you specified and reports on the state of the port reachability, without the need to have the ArcGIS Enterprise software installed and listening on the port.  This can be a helpful script to use before you begin a deployment to ensure that no firewalls or filters are blocking port traffic intended for the ArcGIS Enterprise application servers.
 
+- [**configureAGSServiceAccount.ps1**](./5_troubleshooting/configureAGSServiceAccount.ps1)
+    - This script allows you to choose a service account for the ArcGIS Server service, and then applies the account, restarts the ArcGIS Server service, and confirms the service account has full control permissions to the config-store, directories and logs locations.  As of Enterprise 12.0, the Configure ArcGIS Server Account utility has been retired, so this script aims to replace that functionality.
+
 - [**restartServers.ps1**](./5_troubleshooting/restartServers.ps1)
     - This script remotely reboots servers provided in a list.  When troubleshooting an issue with your deployment, or if you encounter a situation where the PowerShell deploment fails and stalls mid-installation, it's sometimes helpful to reboot the server to clear out any pending actions/processes or settings.
 

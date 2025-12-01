@@ -1,3 +1,13 @@
+#Copyright 2025 Esri
+
+#Licensed under the Apache License Version 2.0 (the "License"); you may not use this file except in compliance with the License.
+#You may obtain a copy of the License at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+#Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+
 ## Usage instructions
 # Run this script in an Administrator session of PowerShell
 # This script is intended to replace the functionality previously offered by the built-in Configure ArcGIS Server Account utlity that has been retired as of Enterprise 12.0.
@@ -22,7 +32,7 @@
   (Optional) Plain password. If omitted, you will be prompted securely.
 
 .EXAMPLE
-  .\ConfigureAGSServiceAccount.ps1 -Account "MYDOMAIN\svcaccount" -ConfigStorePath C:\arcgisserver\config-store -DirectoriesRootPath C:\arcgisserver\directories -LogsPath C:\arcgisserver\logs
+  .\configureAGSServiceAccount.ps1 -Account "MYDOMAIN\svcaccount" -ConfigStorePath C:\arcgisserver\config-store -DirectoriesRootPath C:\arcgisserver\directories -LogsPath C:\arcgisserver\logs
 #>
 
 param(
